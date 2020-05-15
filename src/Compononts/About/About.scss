@@ -54,12 +54,20 @@
             margin-top: 5px;
             margin-bottom: 5px;
         }
-        &__showTrailer{
-            cursor: pointer;
-            font-weight: bold;
-            &:hover{
-                color: rgb(87, 78, 78);
-                transition-duration: 0.5;
+        &__secondPart{
+            display: flex;
+            &__showTrailer{
+                cursor: pointer;
+                font-weight: bold;
+                &:hover{
+                    color: rgb(87, 78, 78);
+                    transition-duration: 0.5;
+                }
+            }
+            &-rightSide{
+                width: 300px;
+                height: 200px;
+                overflow: hidden;
             }
         }
     }

@@ -9,19 +9,18 @@ export function addFavorite(favoriteFilm,listFavoriteFilms){
             listFavoriteFilms.map((value)=>{
                 if(favoriteFilm.id == value.id){
                     listFavoriteFilms = listFavoriteFilms.filter(deleteFilm=>(deleteFilm.id != favoriteFilm.id));
-                    addFilm = false
+                    addFilm = false;
                 }else{
-                    addFilm = true
+                    addFilm = true;
                 }
             })
         }
         if(addFilm){
-            listFavoriteFilms.push(favoriteFilm)
+            listFavoriteFilms.push(favoriteFilm);
             addFilm = false;
         }
-        dispatch(addFavoriteFilm(listFavoriteFilms))
-        location.reload()
-        
+        dispatch(addFavoriteFilm(listFavoriteFilms));
+        location.reload();
     }
 }
 

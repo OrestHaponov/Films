@@ -9,13 +9,13 @@ class FilmCards extends React.Component{
     
     render(){
         return(
-            <div className="popular">
+            <div className="filmcard">
                 <div className="wrapper">
                 {this.props.listFilm.map((value,index)=>{
                     let filmPoster = `https://image.tmdb.org/t/p/w500${value.poster_path}`;
                     let moreAboutFilm = `https://api.themoviedb.org/3/movie/${value.id}?api_key=6f7c9fe2b5229b4b0b6dbe66fed3ef18&language=en-US`;
                     return(
-                    <div className="popular__inner" key={index}>
+                    <div className="filmcard__inner" key={index}>
                         <Link to={{
                             pathname: '/about',
                                 state: {
@@ -24,12 +24,12 @@ class FilmCards extends React.Component{
                                     filmId: value.id,
                                 }
                             }}>
-                            <div className="popular__inner__card">
-                                <div className="popular__inner__card__poster">
+                            <div className="filmcard__inner__card">
+                                <div className="filmcard__inner__card__poster">
                                     <img src={filmPoster} alt=""/>
                                     <span>{value.vote_average}</span>
                                 </div>
-                                <div className="popular__inner__card__title">
+                                <div className="filmcard__inner__card__title">
                                     <h3>{value.title} <br /><span> {value.release_date.substr(0,4)}</span></h3>
                                 </div>
                             </div>

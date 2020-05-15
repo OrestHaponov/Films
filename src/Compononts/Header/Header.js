@@ -17,10 +17,27 @@ class Header extends React.Component{
                             <Link to="/"><img src={Logo} alt=""/></Link>   
                         </li>
                         <li>
-                            <Link to="/popular">Popular</Link>
+                            <Link to="/favorite">Favorite</Link>
                         </li>
                         <li>
-                            <Link to="/favorite">Favorite</Link>
+                            <Link to="/popular">
+                                Popular
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/top_rated">
+                                Top rated
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/upcoming">
+                                Upcoming
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/now_playing">
+                                Now playing
+                            </Link>
                         </li>
                     </ul>
                 </div>

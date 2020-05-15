@@ -1,7 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
 import {Link} from "react-router-dom";
-import {useHistory} from 'react-router';
 import "./_slick.scss";
 import "./_slickTheme.scss";
 
