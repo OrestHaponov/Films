@@ -8,7 +8,6 @@ class SimilarFilms extends React.Component{
             similarFilms: []
         }
     }
-
     
     getSimilarFilms = () =>{
         let similarFilms = `https://api.themoviedb.org/3/movie/${this.props.filmId}/similar?api_key=6f7c9fe2b5229b4b0b6dbe66fed3ef18&language=en-US&page=1`;
@@ -23,7 +22,7 @@ class SimilarFilms extends React.Component{
               });
             });
         } 
-
+    
     componentDidMount(){
         this.getSimilarFilms();
     }

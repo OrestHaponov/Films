@@ -22,7 +22,7 @@ class AboutTrailer extends React.Component{
             })
         });
     }
-
+    
     componentDidMount(){
         this.getFilmTrailerKey();
     }

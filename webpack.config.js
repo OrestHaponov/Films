@@ -8,7 +8,8 @@ const conf  = {
     filename: "main.js"
   },
   devServer: {
-    overlay: true
+    overlay: true,
+    historyApiFallback: true,
 },
   module: {
     rules: [

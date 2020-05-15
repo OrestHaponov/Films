@@ -1,5 +1,6 @@
 import React from "react";
 import AboutTrailer from "./AboutTrailer/AboutTrailer";
+import AddFavorite from "./AddFavorite/AddFavorite";
 
 class AboutInfo extends React.Component{
     constructor(props){
@@ -14,6 +15,9 @@ class AboutInfo extends React.Component{
                         {this.props.title}
                         <span>({this.props.releaseDate.substr(0, 4)})</span>
                     </h1>
+                        <AddFavorite 
+                            detailsAboutFilm={this.props.detailsAboutFilm}
+                        />
                 </div>
                 <div className="about__info__overview">
                     {this.props.overview != '' ?

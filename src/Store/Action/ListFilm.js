@@ -1,13 +1,14 @@
-import {LIST_FILM} from "./actionTypes";
+import {LIST_FILM,CHANGE_ACTIVE_PAGE} from "./actionTypes";
 
-export function getListFilm(){
+export function getListFilm(filmApi,pageNumber){
     return(dispatch) =>{
-        fetch("https://api.themoviedb.org/3/movie/popular?api_key=6f7c9fe2b5229b4b0b6dbe66fed3ef18&language=en-US&page=1")
+        fetch(filmApi)
             .then((response) => {
                 return response.json();
             })
             .then((popularFilms) => {
-                dispatch(listFilm(popularFilms.results))
+                dispatch(listFilm(popularFilms.results));
+                dispatch(changeActivePage(pageNumber,filmApi));
             });
     }
 }
@@ -16,5 +17,12 @@ export function listFilm(listFilm){
     return{
         type: LIST_FILM,
         listFilm
+    }
+}
+
+export function changeActivePage(pageNumber,filmApi){
+    return{
+        type: CHANGE_ACTIVE_PAGE,
+        pageNumber,filmApi
     }
 }

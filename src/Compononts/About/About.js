@@ -11,6 +11,7 @@ class About extends React.Component{
         }
     }
 
+    
     filmDetails=()=>{
         fetch(this.props.location.state.moreAboutFilm)
         .then((moreDetails) => {
@@ -25,7 +26,7 @@ class About extends React.Component{
             }) 
         });
     }
-
+    
     componentDidMount(){
         this.filmDetails()
     }
@@ -51,6 +52,7 @@ class About extends React.Component{
                                         rate={value.vote_average}
                                         genres={value.genres}
                                         filmId={value.id}
+                                        detailsAboutFilm={this.state.detailsAboutFilm}
                                     />
                                 </div>
                             )

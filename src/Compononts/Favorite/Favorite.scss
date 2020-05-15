@@ -1,0 +1,31 @@
+.favorite{
+    .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__title{
+        flex-basis: 100%;
+        margin-left: 50px;
+    }
+    &__card{
+        margin-left: 50px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-basis: 45%;
+        box-shadow: 0 0 5px rgba(0,0,0,0.5);
+        border-radius: 10px;
+        &__poster{
+            margin-right: 10px;
+            img{
+                display: block;
+                border-radius: 10px 0 0 10px;
+                height: 350px;
+            }
+        }
+        &__description{
+            h3{
+               margin: 0; 
+            }
+        }
+    }
+}

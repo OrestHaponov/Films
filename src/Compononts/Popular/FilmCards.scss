@@ -47,3 +47,33 @@
         }
     }
 }
+
+.pagination{
+    text-align: center;
+    list-style: none;
+    li{
+        display: inline;
+        color: #081C24;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: 'FiraSans-Regular';
+        margin: 10px;
+        border: 1px solid #081C24;
+        border-radius: 1px;
+        padding: 5px 10px 5px 10px;
+        a{
+            text-decoration: none;
+            color: #081C24;
+        }
+    }
+}
+
+.active{
+    color: #fff;
+    background: #081C24;
+}
+
+.activelink{
+    color: #fff !important;
+}
+
